@@ -1,0 +1,16 @@
+# Keymap
+[[mgr.prepend_keymap]]
+on   = [ "g", "1" ]
+run  = "cd /mnt/CN_1tb"
+desc = "Cd to CN_1tb"
+
+[[mgr.prepend_keymap]]
+on = [ "g", "t" ]
+run = "cd /mnt/CN_1tb/Rtemp"
+desc = "Go Rtemp"
+
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "p" ]
+run  = "cd ~/Pictures"
+desc = "Cd to ~/Pictures"

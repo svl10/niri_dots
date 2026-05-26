@@ -1,0 +1,15 @@
+
+# yazi.toml
+[mgr]
+show_hidden = true
+
+[opener]
+image_files = [
+    { run = "gwenview \"$1\"", desc = "Gwenview for Images", for = "linux" }
+]
+
+[open]
+prepend_rules = [
+    { mime = "image/*", use = [ "image_files" ] }
+]
+
