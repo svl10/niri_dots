@@ -85,7 +85,7 @@ input {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1080@120.030"
+    mode "1920x1200@60.000"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
     scale 2
@@ -410,6 +410,7 @@ binds {
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.
     Mod+O repeat=false { toggle-overview; }
+    Mod+W repeat=false { toggle-overview; }
 
     Mod+Q repeat=false { close-window; }
 
@@ -423,8 +424,8 @@ binds {
     Mod+L     { focus-column-right; }
 
     Mod+Ctrl+Left  { move-column-left; }
-    Mod+Ctrl+Down  { move-window-down; }
-    Mod+Ctrl+Up    { move-window-up; }
+    // Mod+Ctrl+Down  { move-window-down; }
+    // Mod+Ctrl+Up    { move-window-up; }
     Mod+Ctrl+Right { move-column-right; }
     Mod+Ctrl+H     { move-column-left; }
     Mod+Ctrl+J     { move-window-down; }
@@ -550,6 +551,8 @@ binds {
     Mod+Ctrl+8 { move-column-to-workspace 8; }
     Mod+Ctrl+9 { move-column-to-workspace 9; }
 
+    Mod+Ctrl+Up { move-column-to-workspace-up; }
+    Mod+Ctrl+Down { move-column-to-workspace-down; }
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
 
@@ -606,7 +609,7 @@ binds {
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
-    Mod+W { toggle-column-tabbed-display; }
+    // Mod+W { toggle-column-tabbed-display; }
 
     // Actions to switch layouts.
     // Note: if you uncomment these, make sure you do NOT have
@@ -643,6 +646,13 @@ binds {
 layer-rule {
     // match namespace="noctalia-wallpoaper-eDP-1"
     place-within-backdrop true
+}
+
+
+gestures {
+    hot-corners {
+        off
+    }
 }
 
 
